@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | Мой магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <main class="account-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> > <span>Личный кабинет</span>
+            </div>
+            <div class="account-layout">
+                <aside class="account-sidebar">
+                    <div class="user-info">
+                        <div class="avatar">ИИ</div>
+                        <div class="name">Иван Иванов</div>
+                        <div class="email">ivan@example.com</div>
+                    </div>
+                    <nav class="account-menu">
+                        <ul>
+                            <li class="active"><a href="orders.html">Мои заказы</a></li>
+                            <li><a href="profile.html">Профиль</a></li>
+                            <li><a href="addresses.html">Адреса доставки</a></li>
+                            <li><a href="wishlist.html">Избранное</a></li>
+                            <li><a href="settings.html">Настройки</a></li>
+                            <li><a href="#" id="logoutLink">Выйти</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="account-content">
+                    <section class="orders-history">
+                        <h2>История заказов</h2>
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-number">Заказ #12345</div>
+                                    <div class="order-date">15 октября 2024</div>
+                                    <div class="order-status delivered">Доставлен</div>
+                                    <div class="order-total">35,349 ₽</div>
+                                </div>
+                                <div class="order-items-preview">
+                                    <div class="item">
+                                        <img src="images/products/smartphone-x-thumb.jpg" alt="Smartphone X">
+                                        <span class="name">Smartphone X</span>
+                                        <span class="quantity">1 шт.</span>
+                                        <span class="price">34,999 ₽</span>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/products/case-thumb.jpg" alt="Чехол">
+                                        <span class="name">Чехол для Smartphone X</span>
+                                        <span class="quantity">1 шт.</span>
+                                        <span class="price">350 ₽</span>
+                                    </div>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="repeat-order">Повторить заказ</button>
+                                    <button class="view-details">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="account-wishlist">
+                        <h2>Избранное</h2>
+                        <div class="wishlist-grid">
+                            <!-- Товары в избранном -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/account.js"></script>
+    <script>
+        document.getElementById('logoutLink')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

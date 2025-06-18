@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планшеты | Электроника</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/tablets.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <main class="catalog-page">
+        <div class="container">
+            <h1 class="section-title">Планшеты</h1>
+            <div class="catalog-layout">
+                <aside class="filters-bar">
+                    <h3>Фильтры</h3>
+                    <div class="filter-group">
+                        <h4>Цена, ₽</h4>
+                        <div class="price-range">
+                            <input type="number" id="minPrice" placeholder="От">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" placeholder="До">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Бренд</h4>
+                        <div class="brands-list" id="brandList"></div>
+                    </div>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Поиск по планшетам...">
+                    <div class="filter-actions">
+                        <button class="apply-filters">Применить</button>
+                        <button class="reset-filters">Сбросить</button>
+                    </div>
+                </aside>
+                <div class="catalog-content">
+                    <div class="products-grid" id="productsGrid"></div>
+                    <div class="pagination" id="pagination"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
